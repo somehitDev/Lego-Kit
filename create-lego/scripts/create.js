@@ -5,7 +5,7 @@ import path from "path";
 import fs from "fs";
 
 
-export function create(location = process.cwd()) {
+export function create(location) {
     console.log("========= Lego-Kit ========");
 
     inquirer.prompt([

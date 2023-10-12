@@ -1,6 +1,6 @@
 {
     "name": "create-lego",
-    "version": "0.0.1-beta.1",
+    "version": "0.0.1-beta.8",
     "description": "cli tool for create Lego.js template",
     "type": "module",
     "bin": {
@@ -23,7 +23,7 @@
         "url": "https://github.com/oyajiDev/Lego-Kit/issues"
     },
     "homepage": "https://github.com/oyajiDev/Lego-Kit/tree/master/create-lego",
-    "devDependencies": {
+    "dependencies": {
         "fs": "^0.0.1-security",
         "inquirer": "^9.2.11",
         "simple-git": "^3.20.0"
