@@ -7,6 +7,9 @@
         "create-lego": "scripts/cli.js"
     },
     "main": "scripts/create.js",
+    "engines": {
+        "node": ">=v18.18.0"
+    },
     "scripts": {
         "create": "node scripts/cli.js"
     },
