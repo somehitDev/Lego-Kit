@@ -1,0 +1,31 @@
+{
+    "name": "create-lego",
+    "version": "0.0.1",
+    "description": "cli tool for create Lego.js template",
+    "type": "module",
+    "bin": {
+        "create-lego": "scripts/cli.js"
+    },
+    "main": "scripts/create.js",
+    "scripts": {
+        "create": "node scripts/cli.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/oyajiDev/Lego-Kit.git"
+    },
+    "keywords": [
+        "lego.js"
+    ],
+    "author": "oyajiDev",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/oyajiDev/Lego-Kit/issues"
+    },
+    "homepage": "https://github.com/oyajiDev/Lego-Kit#readme",
+    "devDependencies": {
+        "fs": "^0.0.1-security",
+        "inquirer": "^9.2.11",
+        "simple-git": "^3.20.0"
+    }
+}
