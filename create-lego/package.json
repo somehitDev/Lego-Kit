@@ -22,7 +22,7 @@
     "bugs": {
         "url": "https://github.com/oyajiDev/Lego-Kit/issues"
     },
-    "homepage": "https://github.com/oyajiDev/Lego-Kit#readme",
+    "homepage": "https://github.com/oyajiDev/Lego-Kit/tree/master/create-lego",
     "devDependencies": {
         "fs": "^0.0.1-security",
         "inquirer": "^9.2.11",
