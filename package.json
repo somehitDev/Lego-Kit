@@ -1,7 +1,7 @@
 {
     "name": "legokit",
     "version": "1.0.0",
-    "description": "Starter-Kit for lego.js",
+    "description": "Starter-Kit for Lego.js",
     "scripts": {
         "test:create": "create-lego-project"
     },
