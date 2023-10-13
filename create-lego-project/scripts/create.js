@@ -47,7 +47,7 @@ export function create(location) {
         fs.rmSync(path.join(location, ".git"), { recursive: true });
         fs.unlinkSync(path.join(location, ".gitignore"));
 
-        console.log("========= Finished ========");
+        console.log("========= Finished ========\n");
         console.log(`= run "cd ${packageInfo.name} && npm install"`);
         console.log("= run \"npm run serve\" for preview!");
 

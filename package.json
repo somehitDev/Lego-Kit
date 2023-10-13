@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Starter-Kit for lego.js",
     "scripts": {
-        "test:create": "create-legojs"
+        "test:create": "create-lego-project"
     },
     "repository": {
     "type": "git",
@@ -21,6 +21,6 @@
     },
     "homepage": "https://github.com/oyajiDev/Lego-Kit#readme",
     "devDependencies": {
-        "create-legojs": "file:./create-legojs"
+        "create-lego-project": "file:./create-lego-project"
     }
 }
