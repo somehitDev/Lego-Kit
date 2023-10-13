@@ -1,0 +1,26 @@
+{
+    "name": "legokit",
+    "version": "1.0.0",
+    "description": "Starter-Kit for lego.js",
+    "scripts": {
+        "test:create": "create-legojs"
+    },
+    "repository": {
+    "type": "git",
+        "url": "git+https://github.com/oyajiDev/Lego-Kit.git"
+    },
+    "keywords": [
+        "lego.js",
+        "cli",
+        "kit"
+    ],
+    "author": "oyajiDev",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/oyajiDev/Lego-Kit/issues"
+    },
+    "homepage": "https://github.com/oyajiDev/Lego-Kit#readme",
+    "devDependencies": {
+        "create-legojs": "file:./create-legojs"
+    }
+}
