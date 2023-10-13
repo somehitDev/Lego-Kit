@@ -8,5 +8,5 @@
 
 ## 🛠 usage
 ```zsh
-npm create lego@latest
+npm create lego-project@latest
 ```
