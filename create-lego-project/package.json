@@ -3,7 +3,9 @@
     "version": "0.0.2",
     "description": "cli tool for create Lego.js template",
     "type": "module",
-    "bin": "scripts/cli.js",
+    "bin": {
+        "create-lego-project": "scripts/cli.js"
+    },
     "main": "scripts/create.js",
     "engines": {
         "node": ">=v18.18.0"
