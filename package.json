@@ -7,19 +7,19 @@
     },
     "repository": {
     "type": "git",
-        "url": "git+https://github.com/oyajiDev/Lego-Kit.git"
+        "url": "git+https://github.com/somehitDev/Lego-Kit.git"
     },
     "keywords": [
         "lego.js",
         "cli",
         "kit"
     ],
-    "author": "oyajiDev",
+    "author": "somehitDev",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/oyajiDev/Lego-Kit/issues"
+        "url": "https://github.com/somehitDev/Lego-Kit/issues"
     },
-    "homepage": "https://github.com/oyajiDev/Lego-Kit#readme",
+    "homepage": "https://github.com/somehitDev/Lego-Kit#readme",
     "devDependencies": {
         "create-lego-project": "file:./create-lego-project"
     }

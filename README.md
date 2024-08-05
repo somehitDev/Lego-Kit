@@ -10,4 +10,4 @@
 
 | packages        | status |
 | --------------- | ------ |
-| <a href="https://github.com/oyajiDev/Lego-Kit/tree/master/create-lego-project">create-lego-project</a> | active |
+| <a href="https://github.com/somehitDev/Lego-Kit/tree/master/create-lego-project">create-lego-project</a> | active |
