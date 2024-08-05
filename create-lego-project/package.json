@@ -1,6 +1,6 @@
 {
     "name": "create-lego-project",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "cli tool for create Lego.js template",
     "type": "module",
     "bin": "scripts/cli.js",
@@ -26,8 +26,9 @@
     },
     "homepage": "https://github.com/oyajiDev/Lego-Kit/tree/master/create-lego-project",
     "dependencies": {
+        "decompress": "^4.2.1",
         "fs": "^0.0.1-security",
         "inquirer": "^9.2.11",
-        "simple-git": "^3.20.0"
+        "node-wget": "^0.4.3"
     }
 }

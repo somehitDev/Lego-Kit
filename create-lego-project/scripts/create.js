@@ -1,6 +1,7 @@
 
 import inquirer from "inquirer";
-import SimpleGit from "simple-git";
+import wget from "node-wget";
+import decompress from "decompress";
 import path from "path";
 import fs from "fs";
 
@@ -29,29 +30,40 @@ export function create(location) {
             type: "input", name: "license", default: "MIT",
             message: "License: "
         }
-    ]).then(async (answer) => {
-        await SimpleGit().clone(`https://github.com/oyajiDev/lego-template-${answer.templateVersion}`, location);
+    ]).then((answer) => {
+        const rootDir = path.dirname(location);
+        const templateZipFile = path.join(rootDir, "template.zip");
+        wget({ url: `https://github.com/somehitDev/lego-template-${answer.templateVersion}/archive/refs/heads/master.zip`, dest: templateZipFile }, async ( err, resp, body ) => {
+            // unzip and remove
+            await decompress(templateZipFile, rootDir);
+            fs.rmSync(templateZipFile);
 
-        // replace package.json
-        const packageInfo = JSON.parse(fs.readFileSync(path.join(location, "package.json"), { encoding: "utf-8" }));
-        
-        packageInfo.name = path.basename(location);
-        packageInfo.version = answer.version;
-        packageInfo.description = answer.description;
-        packageInfo.author = answer.author;
-        packageInfo.license = answer.license;
+            // rename
+            fs.renameSync(path.join(rootDir, `lego-template-${answer.templateVersion}-master`), location);
 
-        fs.writeFileSync(path.join(location, "package.json"), JSON.stringify(packageInfo), { encoding: "utf-8" });
+            // replace package.json
+            const packageInfo = JSON.parse(fs.readFileSync(path.join(location, "package.json"), { encoding: "utf-8" }));
+            
+            packageInfo.name = path.basename(location);
+            packageInfo.version = answer.version;
+            packageInfo.description = answer.description;
+            packageInfo.author = answer.author;
+            packageInfo.license = answer.license;
 
-        // remove git files
-        fs.rmSync(path.join(location, ".git"), { recursive: true });
-        fs.unlinkSync(path.join(location, ".gitignore"));
+            fs.writeFileSync(path.join(location, "package.json"), JSON.stringify(packageInfo, null, 4), { encoding: "utf-8" });
 
-        console.log("========= Finished ========\n");
-        console.log(`= run "cd ${packageInfo.name} && npm install"`);
-        console.log("= run \"npm run serve\" for preview!");
+            // remove git files
+            fs.unlinkSync(path.join(location, ".gitignore"));
 
+            console.log("========= Finished ========\n");
+            console.log(`= run "cd ${packageInfo.name} && npm install"`);
+            console.log("= run \"npm run serve\" for preview!");
+        });
     }).catch(err => {
+        if (fs.existsSync(templateZipFile)) {
+            fs.rmSync(templateZipFile);
+        }
+
         console.log(err);
     });
 }
